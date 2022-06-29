@@ -1,0 +1,105 @@
+/* 
+⚡ MAKE SURE TO SUBSCRIBE PROGRAMMER CLOUD ⚡
+*/
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(to right, #ab0020, #facb33);
+  height: 100vh;
+  font-family: "Helvetica", sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  width: 85%;
+  height: 85%;
+  margin: 50px auto;
+}
+
+.container h2 {
+  width: 33%;
+  padding: 10px 20px;
+  margin: 20px auto;
+  border-radius: 20px;
+  background-color: rgba(2, 2, 2, 0.3);
+  text-align: center;
+  text-transform: uppercase;
+  box-shadow: 2px 5px 10px rgba(2, 2, 2, 0.3);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.col {
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+
+.col__1 {
+  background: #222;
+}
+
+.col__2 {
+  background: rgba(2, 2, 2, 0.5);
+  background-image: url(../img/flash.png);
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+/* Main Hover Effect */
+
+ul {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  transform: translate(0);
+  text-align: center;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+}
+
+ul li {
+  display: inline-block;
+}
+
+ul a {
+  position: relative;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+}
+
+ul a:hover {
+  color: crimson;
+}
+
+ul a::after {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -5;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%) skew(-89deg) scaleX(1.5);
+  opacity: 0;
+  background: #fff45c;
+  transition: all 0.3s cubic-bezier(0.42, 0.08, 0, 1.8);
+}
+
+ul a:hover::after {
+  width: 140%;
+  transform: translateX(-50%) skew(-20deg) scaleX(1);
+  opacity: 1;
+}
